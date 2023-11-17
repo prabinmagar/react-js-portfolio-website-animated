@@ -19,20 +19,24 @@ export const Portfolio = () => {
   }
 
   return (
-    <>
-      <article>
+    <article>
         <div className='container'>
           <Heading title='Portfolio' />
           <div className='catButton'>
-            {category.map((category) => (
-              <button className='primaryBtn' onClick={() => filterItems(category)} data-aos='zoom-out-down'>
+            {category.map((category, index) => (
+              <button 
+                className='primaryBtn' 
+                onClick={() => filterItems(category)} 
+                data-aos='zoom-out-down'
+                key={category[index]}
+              >
                 {category}
               </button>
             ))}
           </div>
           <div className='content grid3'>
-            {list.map((item) => (
-              <div className='box' data-aos='fade-up'>
+            {list.map((item, index) => (
+              <div className='box' data-aos='fade-up' key={item[index]}>
                 <div className='img'>
                   <img src={item.cover} alt='' />
                 </div>
@@ -46,6 +50,5 @@ export const Portfolio = () => {
           </div>
         </div>
       </article>
-    </>
   )
 }

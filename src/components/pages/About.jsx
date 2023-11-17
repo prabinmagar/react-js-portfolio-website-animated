@@ -4,8 +4,7 @@ import { about } from "../data/dummydata"
 
 export const About = () => {
   return (
-    <>
-      <section className='about'>
+    <section className='about'>
         <div className='container flex'>
           {about.map((val) => (
             <>
@@ -23,6 +22,5 @@ export const About = () => {
           ))}
         </div>
       </section>
-    </>
   )
 }

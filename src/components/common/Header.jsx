@@ -7,15 +7,14 @@ import logo from "../data/images/logo.png"
 export const Header = () => {
   const [responsive, setResponsive] = useState(false)
   return (
-    <>
-      <header>
+    <header>
         <div className='container flexsb'>
           <div className='logo'>
             <img src={logo} alt='' data-aos='zoom-in-right' />
           </div>
           <div className={responsive ? "hideMenu" : "nav"}>
-            {navlink.map((links, i) => (
-              <Link to={links.url} key={i} data-aos='zoom-in-left'>
+            {navlink.map((links, index) => (
+              <Link to={links.url} key={links[index]} data-aos='zoom-in-left'>
                 {links.text}
               </Link>
             ))}
@@ -25,6 +24,5 @@ export const Header = () => {
           </button>
         </div>
       </header>
-    </>
   )
 }

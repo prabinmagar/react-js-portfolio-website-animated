@@ -4,8 +4,7 @@ import { contact } from "../data/dummydata"
 
 export const Contact = () => {
   return (
-    <>
-      <div className='contact'>
+    <div className='contact'>
         <div className='container'>
           <Heading title='Keep In Touch' />
           <div className='content flexsb'>
@@ -21,8 +20,8 @@ export const Contact = () => {
               </form>
             </div>
             <div className='left'>
-              {contact.map((item) => (
-                <div className='box' data-aos='zoom-in'>
+              {contact.map((item, index) => (
+                <div className='box' data-aos='zoom-in' key={item[index]}>
                   <i>{item.icon}</i>
                   <p>{item.text1}</p>
                   <p>{item.text2}</p>
@@ -32,6 +31,5 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-    </>
   )
 }

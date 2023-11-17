@@ -4,10 +4,9 @@ import Typewriter from "typewriter-effect"
 
 export const Hero = () => {
   return (
-    <>
-      <section className='hero'>
-        {home.map((val, i) => (
-          <div className='heroContent'>
+    <section className='hero'>
+        {home.map((val, index) => (
+          <div className='heroContent' key={val[index]}>
             <h3 className='fontSize' data-aos='fade-right'>
               {val.text}
             </h3>
@@ -27,6 +26,5 @@ export const Hero = () => {
           </div>
         ))}
       </section>
-    </>
   )
 }

@@ -4,13 +4,12 @@ import { blog } from "../data/dummydata"
 
 export const Blog = () => {
   return (
-    <>
-      <section className='blog'>
+    <section className='blog'>
         <div className='container'>
           <Heading title='Blog' />
           <div className='content grid3'>
-            {blog.map((item) => (
-              <div className='box' data-aos='flip-left'>
+            {blog.map((item, index) => (
+              <div className='box' data-aos='flip-left' key={item[index]}>
                 <div className='img' data-aos='fade-up'>
                   <img src={item.cover} alt='' data-aos='fade-down' />
                 </div>
@@ -26,6 +25,5 @@ export const Blog = () => {
           </div>
         </div>
       </section>
-    </>
   )
 }

@@ -11,8 +11,7 @@ import { Services } from "./Services"
 import { Testimonials } from "./Testimonials"
 export const Pages = () => {
   return (
-    <>
-      <Router>
+    <Router>
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
@@ -25,6 +24,5 @@ export const Pages = () => {
         </Switch>
         <Footer />
       </Router>
-    </>
   )
 }
