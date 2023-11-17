@@ -14,12 +14,11 @@ export const Testimonials = () => {
     slidesToScroll: 1,
   }
   return (
-    <>
-      <section className='testimonials hero'>
+    <section className='testimonials hero'>
         <div className='container'>
           <Slider {...settings}>
-            {testimonials.map((val) => (
-              <div className='box'>
+            {testimonials.map((val, index) => (
+              <div className='box' key={val[index]}>
                 <i data-aos='zoom-out-up'>
                   <FormatQuoteIcon />
                 </i>
@@ -34,6 +33,5 @@ export const Testimonials = () => {
           </Slider>
         </div>
       </section>
-    </>
   )
 }
